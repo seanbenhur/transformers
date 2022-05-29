@@ -11,6 +11,7 @@ from ..models.bigbird_pegasus import BigBirdPegasusOnnxConfig
 from ..models.blenderbot import BlenderbotOnnxConfig
 from ..models.blenderbot_small import BlenderbotSmallOnnxConfig
 from ..models.camembert import CamembertOnnxConfig
+from ..models.canine import CanineOnnxConfig
 from ..models.convbert import ConvBertOnnxConfig
 from ..models.data2vec import Data2VecTextOnnxConfig
 from ..models.deit import DeiTOnnxConfig
@@ -205,6 +206,14 @@ class FeaturesManager:
             "token-classification",
             "question-answering",
             onnx_config_cls=CamembertOnnxConfig,
+        ),
+        "canine": supported_features_mapping(
+            "default",
+            "sequence-classification",
+            "multiple-choice",
+            "token-classification",
+            "question-answering",
+            onnx_config_cls=CanineOnnxConfig,
         ),
         "convbert": supported_features_mapping(
             "default",

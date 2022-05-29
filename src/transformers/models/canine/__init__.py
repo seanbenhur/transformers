@@ -21,7 +21,7 @@ from ...utils import OptionalDependencyNotAvailable, _LazyModule, is_tokenizers_
 
 
 _import_structure = {
-    "configuration_canine": ["CANINE_PRETRAINED_CONFIG_ARCHIVE_MAP", "CanineConfig"],
+    "configuration_canine": ["CANINE_PRETRAINED_CONFIG_ARCHIVE_MAP", "CanineConfig", "CanineOnnxConfig"],
     "tokenization_canine": ["CanineTokenizer"],
 }
 
@@ -45,7 +45,7 @@ else:
 
 
 if TYPE_CHECKING:
-    from .configuration_canine import CANINE_PRETRAINED_CONFIG_ARCHIVE_MAP, CanineConfig
+    from .configuration_canine import CANINE_PRETRAINED_CONFIG_ARCHIVE_MAP, CanineConfig, CanineOnnxConfig
     from .tokenization_canine import CanineTokenizer
 
     try:
